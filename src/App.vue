@@ -81,13 +81,14 @@
     padding-left: 100px;
   }
   .footer-icon{
+    margin-top: 60px;
     width: 130px;
     height: 100px;
   }
   .footer-text{
     font-size: 30px;
     font-weight: bold;
-    margin-top: -20px;
+    margin-top: 40px;
   }
   .footer__css{
 
