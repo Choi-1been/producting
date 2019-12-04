@@ -83,11 +83,12 @@
   .footer-icon{
     width: 130px;
     height: 100px;
+    margin-top: 60px;
   }
   .footer-text{
     font-size: 30px;
     font-weight: bold;
-    margin-top: -20px;
+    margin-top: 40px;
   }
   .footer__css{
 
