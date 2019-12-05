@@ -20,7 +20,7 @@
         selectSector: 'selectSector'
       }),
       choose: function (param) {
-        this.$router.push('/Manage')
+        this.$router.push('/SelectArea')
         this.selectSector(param)
       },
       notPlant: function () {
