@@ -8,6 +8,7 @@ export default new Vuex.Store({
     selectedSeed: null,
     waiting:0,
     activeBtn:0,
+    userName:String,
     seeds: [
       {
         /* 3 월 심기
@@ -101,7 +102,13 @@ export default new Vuex.Store({
     allArea: Array(Array(Array(),Array(),Array())
         ,Array(Array(),Array(),Array())
         ,Array(Array(),Array(),Array())),
-    selectedArea: Array(),
+    selectedArea: Array({
+      type:Number()
+    },{
+      type: Number()
+    },{
+      type: Number()
+    }),
   },
   getters: {
     selected: function (state) {
@@ -121,7 +128,10 @@ export default new Vuex.Store({
     },
     selectedArea: function (state) {
       return state.selectedArea;
-    }
+    },
+    getname: function (state) {
+      return state.userName;
+    },
   },
   mutations: {
     setArea: function(state){
@@ -133,7 +143,6 @@ export default new Vuex.Store({
           }
         }
       }
-
       state.allArea[0][1][2] = "최원빈";
       state.allArea[0][1][3] = "최원빈";
       state.allArea[0][2][7] = "최원빈";
@@ -179,9 +188,9 @@ export default new Vuex.Store({
       return state.waiting += 1;
     },
     selectArea: function (state, param) {
-      state.selectedArea[0] = param[0];
-      state.selectedArea[1] = param[1];
-      state.selectedArea[2] = param[2];
+      state.selectedArea[0] = Number(param[0]);
+      state.selectedArea[1] = Number(param[1]);
+      state.selectedArea[2] = Number(param[2]);
     },
     selectSector: function (state, param) {
       state.sector = param;
@@ -189,6 +198,12 @@ export default new Vuex.Store({
     changeActiveBtn: function (state, param) {
       state.activeBtn = param;
     },
+    changeName: function (state, param) {
+      state.userName = param
+    },
+    inputArea: function (state, param) {
+      state.allArea[param[0]][param[1]][param[2]] = param[3]
+    }
 
   },
   actions: {

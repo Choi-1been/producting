@@ -65,14 +65,23 @@
     },
     methods: {
       ...mapMutations({
-        changeActiveBtn:'changeActiveBtn'
+        changeActiveBtn:'changeActiveBtn',
+        setArea: 'setArea'
       }),
       clickLogo: function () {
         this.$router.push('/');
         this.changeActiveBtn(0);
       }
+    },
+    created() {
+      this.setArea();
     }
   };
+
+  /* TODO
+  *  1. 심고갈지 안심고갈지 선택하는 체크박스
+  *  2. 관리모드 -> SelectSector 블럭 체크박스
+  * */
 </script>
 
 <style>

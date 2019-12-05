@@ -77,13 +77,13 @@
     computed: {
       ...mapGetters({
         getArea: 'getArea',
+        getAreas: 'getAreas',
         getSector: 'getSector',
       }),
     },
     methods: {
       ...mapMutations({
         selectArea: 'selectArea',
-        setArea: 'setArea',
         changeActiveBtn: 'changeActiveBtn'
       }),
       clickBuy: function () {
@@ -100,9 +100,9 @@
       },
       clickBox: function (page, col, row) {
         let param = [];
-        param.push(page);
-        param.push(col);
-        param.push(row);
+        param.push(Number(page));
+        param.push(Number(col));
+        param.push(Number(row));
 
         this.selectArea(param);
 
@@ -113,7 +113,6 @@
       }
     },
     created() {
-      this.setArea();
       this.page = this.getSector;
     }
   }

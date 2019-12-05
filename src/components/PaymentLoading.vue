@@ -1,7 +1,8 @@
 <template>
-  <div>
-    결제화면이예용
-    돈을 넣었는지 확인중입니다.....
+  <div class="container__all">
+    <div class="loading" style="font-size: 100px; font-weight: bold;">
+      결제중입니다.......
+    </div>
   </div>
 </template>
 
@@ -10,10 +11,8 @@
     name: "PaymentLoading",
     created() {
       setTimeout(function () {
-        console.log(this)
       },1000)
       setTimeout(() => {
-        console.log(this)
         this.$router.push('/finish')
       }, 3000 );
     }
@@ -21,5 +20,19 @@
 </script>
 
 <style scoped>
-
+  .loading {
+    background-color: white;
+    margin-top: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  .container__all {
+    width: 1920px;
+    height: 1200px;
+    float:left;
+    position: relative;
+    top: -200px;
+    right: 100px;
+    background-color: rgba(0,0,0,0.5);
+  }
 </style>
