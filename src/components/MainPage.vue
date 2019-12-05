@@ -26,7 +26,7 @@
       }),
       clickButton: function (param) {
         if (param) {
-          this.$router.push('/manage');
+          this.$router.push('Manage');
           this.changeActiveBtn(1);
         } else {
           this.$router.push('selectCR');

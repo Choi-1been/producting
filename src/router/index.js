@@ -8,6 +8,7 @@ import Payment from "../components/Payment";
 import PaymentLoading from "../components/PaymentLoading";
 import Finish from "../components/Finish";
 import SelectSector from "../components/SelectSector";
+import Manage from "../components/Manage";
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/SelectSector',
     name: 'selectsector',
     component: SelectSector
+  },
+  {
+    path: '/Manage',
+    name: 'manage',
+    component: Manage
   },
 ]
 

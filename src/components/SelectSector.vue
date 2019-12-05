@@ -6,6 +6,7 @@
     <button @click="choose(0)" class="btn-a">구역 A</button>
     <button @click="choose(1)" class="btn-b btn-a">구역 B</button>
     <button @click="choose(2)" class="btn-a btn-c">구역 C</button>
+    <v-btn v-if="(selected)" @click="notPlant()" disabled color="success" width="400px" height="100px" style="font-size: 30px; font-weight: bold; background-color: white;" outlined>안 심고갈래요!</v-btn>
   </div>
 </template>
 
@@ -19,8 +20,11 @@
         selectSector: 'selectSector'
       }),
       choose: function (param) {
-        this.$router.push('/selectArea')
+        this.$router.push('/Manage')
         this.selectSector(param)
+      },
+      notPlant: function () {
+        this.$router.push('/Payment');
       }
     }
   }
