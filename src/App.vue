@@ -80,19 +80,23 @@
     padding-top: 40px;
     padding-left: 100px;
   }
+
   .footer-icon{
     width: 130px;
     height: 100px;
-    margin-top: 60px;
+    margin-top: 70px;
   }
+
   .footer-text{
     font-size: 30px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 55px;
   }
+
   .footer__css{
 
   }
+
   .ground{
     background-image: url("./assets/crvending_logo_5.png");
     height: 1000px;

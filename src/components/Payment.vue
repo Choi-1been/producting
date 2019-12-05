@@ -53,9 +53,7 @@
         this.changeActiveBtn(2);
       },
     },
-    created() {
-      console.log(this.selectedArea);
-    }
+    created() {}
   }
 </script>
 
