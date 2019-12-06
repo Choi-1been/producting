@@ -74,8 +74,8 @@
       }),
       clickBuy: function () {
         this.is_click = 0;
-        this.$router.push('Payment');
-        this.changeActiveBtn(3);
+        this.$router.push('/');
+        this.changeActiveBtn(0);
       },
       clickPage: function (paging) {
         this.page = paging;
